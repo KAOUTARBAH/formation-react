@@ -33,13 +33,13 @@ import { User } from '../Type/LoginScreen.Type'
  * Configuration de l'application firebase
  */
 const firebaseConfig = {
-  apiKey: "AIzaSyDpoX9GrV6RzQTVrLRoSksoDJVIQumUoT4",
-  authDomain: "cookthat-8cd9b.firebaseapp.com",
+  apiKey: "AIzaSyDgDgTLY-PtqMBQdE4kMqhDKX7Nivt7KcQ",
+  authDomain: "todo-app-47f31.firebaseapp.com",
   databaseURL: "https://cookthat-8cd9b-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "cookthat-8cd9b",
-  storageBucket: "cookthat-8cd9b.appspot.com",
-  messagingSenderId: "263852106888",
-  appId: "1:263852106888:web:7f556f3cea2895cf3e6b3d"
+  projectId: "todo-app-47f31",
+  storageBucket: "todo-app-47f31.appspot.com",
+  messagingSenderId: "376674894684",
+  appId: "1:376674894684:web:f9e13af0dcdd472d1ef799"
 }
 
 /**
