@@ -28,3 +28,4 @@ Vous retrouverez l'intégralité du code source dans le dossier `src`. Ce dossie
 - `styles/` : Dossier contenant le style de l'application (styled-components)
 - `types/` : Dossier contenant les types typescript de l'application
 - `lib/` : Dossier contenant tout le code externe à React
+- test
