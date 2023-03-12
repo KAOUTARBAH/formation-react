@@ -1,5 +1,7 @@
+import { addDoc, collection, doc, getFirestore, setDoc } from 'firebase/firestore'
 import { action, map } from 'nanostores'
 import { ChangeEvent } from 'react'
+import { db } from '../lib/Firebase'
 
 /**
  * Représente une tache à faire
@@ -206,8 +208,33 @@ export const removeTasks = action(
 )
 
 /**
+ * Je créé un constante contenant le nom de la collection
+ * Fireabse pour les todoList. Ce qui m'évite de la réécrire
+ * à chaque et de faire de fautes de frappe
+ */
+export const TODOLIST_COLLECTION = 'todoList'
+//export type Identifiable<T extends {}> = T & { id: string }
+
+/**
  * Enregistre la liste dans firebase
  */
-export const save = action(TodoListStore, 'save', async store => {
-  // Enregistré la liste dans firestore !
+export const save = action(TodoListStore, 'save', async (store )=> {
+  // Je récupére toutes les todo lists
+  const { todoLists } = store.get()
+
+/**
+ * Insére une nouvelle todolist dans firebase
+ */
+  // Je récupére d'abord la collection de todo
+  const col = collection(db, TODOLIST_COLLECTION)
+  // On insére des données dans la collection. Nous récupérons
+  // une référence firebase qui contiendra l'id de l'address
+  // qui vient d'être inséré
+  //{  dans le store ...}
+  //const reference = await addDoc(col, {todoLists})
+  const reference = await setDoc(doc(col), {todoLists})
+ 
+  //store.setKey('bd',reference)
+  // La reference contient l'identifiant créé par firebase
+ // const id = reference.id
 })
