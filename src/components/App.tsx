@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { GlobalStyle } from '../styles/App.style'
 import Connection from './Connection'
 import Home from './Home'
+import Menu from './Menu'
 import NewTodoList from './NewTodoList'
 import Subscription from './Subscription'
 import TodoList from './TodoList'
@@ -22,6 +23,7 @@ export default function App() {
         </Route>
         <Route path="/inscription" element={<Subscription />} />
       </Routes>
+      <Menu/>
     </BrowserRouter>
   )
 }
